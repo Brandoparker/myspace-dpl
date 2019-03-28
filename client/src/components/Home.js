@@ -39,7 +39,9 @@ class Home extends React.Component {
       return (
         <div>
           <br />
-          <Header as='h1'>friends</Header>
+          <Header as='h1'>Friend Suggestions</Header>
+          <br />
+          <h2>Click Thumbs Up to add Friend</h2>
           <br />
           <Card key={friend.id}>
             <Image src={friend.avatar} />
