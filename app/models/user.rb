@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
 
+  serialize :liked_characters, Array
+
   def self.random_character(ids)
     ids = ids.length > 0 ? ids : [0]
     Character.where("id NOT IN (?)", ids).order("RANDOM()")

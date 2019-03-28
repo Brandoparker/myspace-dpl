@@ -13,7 +13,7 @@ class MyCharacters extends React.Component {
   render() {
     const { characters, } = this.state;
     return (
-      <Card.Group itemsPerRow={3}>
+      <Card.Group itemsPerRow={4}>
         { characters.map( character =>
           <Card key={character.id}>
             <Image src={character.avatar} />

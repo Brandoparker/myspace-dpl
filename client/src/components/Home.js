@@ -39,7 +39,7 @@ class Home extends React.Component {
       return (
         <div>
           <br />
-          <Header as='h1'>Simpson Space</Header>
+          <Header as='h1'>Characters</Header>
           <br />
           <Card key={character.id}>
             <Image src={character.avatar} />

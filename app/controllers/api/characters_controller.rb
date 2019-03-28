@@ -2,7 +2,7 @@ class Api::CharactersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    render json: User.random_character(current_user.liked_character)
+    render json: User.random_character(current_user.liked_characters)
   end
 
   def update
@@ -10,8 +10,8 @@ class Api::CharactersController < ApplicationController
     current_user.save
   end
   
-  def my_cats
-    render json: User.liked(current_user.liked_cats)
+  def my_characters
+    render json: User.liked(current_user.liked_characters)
   end
 
 end
