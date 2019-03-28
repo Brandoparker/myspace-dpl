@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'api/auth'
   
   namespace :api do
-    resources :characters, only: [:index, :show, :update]
-    get 'my_characters', to: 'characters#my_characters'
+    resources :friends, only: [:index, :show, :update]
+    get 'my_friends', to: 'friends#my_friends'
   end
   
   
